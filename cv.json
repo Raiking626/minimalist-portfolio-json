@@ -1,12 +1,12 @@
 {
     "basics": {
       "name": "Kevin Rafael Puente Morales",
-      "label": ".NET Developer con 3 años de experiencia laboral",
+      "label": ".NET Developer con 4 años de experiencia laboral",
       "image": "/img/profile_photo.webp",
       "email": "krpuente2000@gmail.com",
       "phone": "+57 3166658052",
       "url": "https://github.com/Raiking626",
-      "summary": "Desarrollador .NET con 3 años de experiencia he trabajado en el sector logistico y de salud desarrollando aplicaciones para una mayor eficiencia en las tareas de estas áreas.",
+      "summary": "Desarrollador .NET con 4 años de experiencia he trabajado en el sector logistico y de salud desarrollando aplicaciones para una mayor eficiencia en las tareas de estas áreas.",
       "location": {
         "address": "",
         "postalCode": "11001",
@@ -30,12 +30,12 @@
     "work": [
       {
         "name": "SofTech S.A.S.",
-        "position": "Desarrollador Backend",
+        "position": "Developer Semi Sr",
         "startDate": "2023-10-02",
         "endDate": null,
-        "summary": "Desarrollador backend utilizando tecnologías .NET, Java (Springboot) y MySQL, también he utilizado algo de Angular para desarrollar Frontend para los requerimientos técnicos de la compañía, actualmente se está desarrollando un aplicativo ERP para el área lógistica con una visión de alcance a nivel internacional.",
+        "summary": "Desarrollador backend utilizando tecnologías .NET, Java (Springboot), MySQL y Angular para desarrollar componentes y dar respuesta a los requerimientos técnicos de la compañía, actualmente se está desarrollando un aplicativo ERP para el área lógistica con una visión de alcance a nivel internacional.",
         "highlights": [
-          ".NET", "Angular", "MySQL", "SignalR", "Procedimientos Almacenados", "Java", "TypeScript", "Jasper Reports"
+          ".NET", "Angular", "MySQL", "SignalR", "Procedimientos Almacenados", "Java", "TypeScript", "Jasper Reports", "RESTful API", "Patrones de diseño"
         ]
       },
       {
@@ -285,9 +285,9 @@
     }],
     "projects": [
       {
-        "name": "Asofty",
-        "isActive": false,
-        "description": "Aplicativo ERP para el área lógistica, utiliza Angular, .NET, Java, MySQL y SignalR para su desarrollo. Dentro de mis labores en el proyecto está la creación de los endpoints del backend, las tablas, triggers, eventos programados y procedimientos almacenados de la base de datos, generación de reportes e integración del reporteador, facturación electrónica y transmisión de la factura eléctronica.",
+        "name": "Forwarty",
+        "isActive": true,
+        "description": "Aplicativo ERP para el área lógistica, utiliza Angular, .NET, Java, MySQL y SignalR para su desarrollo. Dentro de mis labores en el proyecto está la creación de los endpoints del backend, las tablas, triggers, eventos programados y procedimientos almacenados de la base de datos, generación de reportes e integración del reporteador, facturación electrónica y transmisión de la factura eléctronica. Además de la creación de componentes nuevos, soporte a errores encontrados en los componentes existentes. Utilización de patrones de diseño para facilitar la comprensión y modularización del código, con el fin de poder mantener una buena mantenibilidad y acelerar el desarrollo. Integración del API de Gemini AI para extracción de datos de archivos PDF e imágenes.",
         "highlights": [
           "Nuevo desarrollo",
           "Internacional",
