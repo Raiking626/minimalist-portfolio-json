@@ -29,23 +29,23 @@
     },
     "work": [
       {
-        "name": "SofTech S.A.S.",
-        "position": "Developer Semi Sr",
-        "startDate": "2023-10-02",
+        "name": "Interrapidísimo",
+        "position": "Ingeniero Senior",
+        "startDate": "2025-10-30",
         "endDate": null,
-        "summary": "Desarrollador backend utilizando tecnologías .NET, Java (Springboot), MySQL y Angular para desarrollar componentes y dar respuesta a los requerimientos técnicos de la compañía, actualmente se está desarrollando un aplicativo ERP para el área lógistica con una visión de alcance a nivel internacional.",
+        "summary": "Desarrollador fullstack, utilizando .NET, Angular, Bases de datos relacionales y no relacionales, Redis y Keycloak. Se desarrollan soluciones solicitadas por clientes internos para la creación de proyectos que mejoren la experiencia en el consumo de los servicios de la compañia. Se mantienen estándares de seguridad y trabajo en equipo.",
         "highlights": [
-          ".NET", "Angular", "MySQL", "SignalR", "Procedimientos Almacenados", "Java", "TypeScript", "Jasper Reports", "RESTful API", "Patrones de diseño"
+          ".NET", "Angular", "MySQL", "SQL Server", "MongoDB", "Procedimientos Almacenados", "Microservicios", "TypeScript", "Microfrontend", "RESTful API", "Patrones de diseño", "Arquitectura Hexagonal", "Metodología SCRUM"
         ]
       },
       {
-        "name": "Stone Colombia S.A.S.",
-        "position": "Freelance",
-        "startDate": "2023-10-10",
-        "endDate": null,
-        "summary": "Desarrollador freelance para la compañía desarrollando aplicaciones bajo tecnologías .NET y framework DevExtreme.",
+        "name": "SofTech S.A.S.",
+        "position": "Developer Semi Sr",
+        "startDate": "2023-10-02",
+        "endDate": "2025-10-28",
+        "summary": "Desarrollador backend utilizando tecnologías .NET, Java (Springboot), MySQL y Angular para desarrollar componentes y dar respuesta a los requerimientos técnicos de la compañía, actualmente se está desarrollando un aplicativo ERP para el área lógistica con una visión de alcance a nivel internacional.",
         "highlights": [
-          ".NET", "DevExteme", "Ajax", "HTML", ".NET Framework 4.5"
+          ".NET", "Angular", "MySQL", "SignalR", "Procedimientos Almacenados", "Java", "TypeScript", "Jasper Reports", "RESTful API", "Patrones de diseño"
         ]
       },
       {
@@ -161,7 +161,7 @@
       },
       {
         "name": "CSS",
-        "level": "Básico",
+        "level": "Medio",
         "keywords": [
           "Desarrollo Web", "Frontend", "Diseño Responsive"
         ]
@@ -175,14 +175,14 @@
       },
       {
         "name": "Tailwind",
-        "level": "Básico",
+        "level": "Medio",
         "keywords": [
           "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
         ]
       },
       {
         "name": "TypeScript",
-        "level": "Medio",
+        "level": "Avanzado",
         "keywords": [
           "Desarrollo Web", "Frontend", "JavaScript Superset"
         ]
@@ -224,7 +224,7 @@
       },
       {
         "name": "Java",
-        "level": "Básico",
+        "level": "Medio",
         "keywords": [
           "Backend", "Web Services"
         ]
@@ -245,16 +245,23 @@
       },
       {
         "name": "Angular",
-        "level": "Básico",
+        "level": "Avanzado",
         "keywords": [
           "Framework", "Frontend", "Componentes", "Servicios", "Single Page Application"
         ]
       },
       {
         "name": "Astro 4",
-        "level": "Básico",
+        "level": "Medio",
         "keywords": [
           "Framework HTML", "Frontend", "Componentes", "Aplicaciones Estáticas"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "level": "Básico",
+        "keywords": [
+          "Bases de Datos", "No Relacional", "Replicas Espejo", "Colecciones"
         ]
       }
     ],
@@ -265,11 +272,11 @@
       },
       {
         "language": "English",
-        "fluency": "Basic"
+        "fluency": "Básico"
       },
       {
         "language": "Portuguese",
-        "fluency": "Basic"
+        "fluency": "Básico"
       }
     ],
     "interests": [{
