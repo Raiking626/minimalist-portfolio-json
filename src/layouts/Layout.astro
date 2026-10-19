@@ -4,6 +4,23 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+// Fuente monoespaciada incluida en el proyecto: DejaVu Sans Mono (de la que deriva Menlo),
+// recortada a los caracteres latinos y sin hinting (~8 KB por grosor). Licencia en src/assets/fonts.
+// Al ser una fuente web, Chrome la incrusta una sola vez por grosor en el PDF;
+// con una fuente del sistema en macOS la incrusta una vez por cada tamaño de letra.
+import monoRegular from "../assets/fonts/dejavu-mono-400.woff2?url";
+import monoBold from "../assets/fonts/dejavu-mono-700.woff2?url";
+
+const fontFaces = [
+  [400, monoRegular],
+  [700, monoBold],
+]
+  .map(
+    ([weight, url]) =>
+      `@font-face{font-family:"DejaVu Mono";font-style:normal;font-weight:${weight};font-display:swap;src:url(${url}) format("woff2");}`,
+  )
+  .join("");
 ---
 
 <!doctype html>
@@ -13,17 +30,26 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={monoRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={monoBold} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={fontFaces}></style>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <slot />
+    <script is:inline>
+      // La negrita monoespaciada solo se usa al imprimir: se carga por adelantado
+      // para que esté lista cuando se abra el cuadro de impresión.
+      document.fonts?.load('700 1em "DejaVu Mono"');
+    </script>
   </body>
 </html>
 
 <style is:global>
   html {
     font-family:
+      "DejaVu Mono",
       Menlo,
       Monaco,
       Lucida Console,
@@ -99,6 +125,19 @@ const { title } = Astro.props;
       padding: 1.5cm !important;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+    }
+
+    /* Una sola familia de fuente y solo dos grosores al imprimir:
+       cada combinación fuente/grosor se incrusta en el PDF y aumenta su peso. */
+    * {
+      font-family: "DejaVu Mono", Menlo, Monaco, "Lucida Console", "Courier New", monospace !important;
+      font-weight: 400 !important;
+    }
+
+    h1,
+    section > h2,
+    h3 {
+      font-weight: 700 !important;
     }
 
     .print {
