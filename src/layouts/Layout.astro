@@ -88,6 +88,19 @@ const { title } = Astro.props;
   }
 
   @media print {
+    /* Sin márgenes de página, el navegador no tiene dónde imprimir
+       la fecha, el título, la URL ni el número de página. */
+    @page {
+      margin: 0;
+    }
+
+    /* El margen se aplica dentro del contenido y se repite en cada página. */
+    main {
+      padding: 1.5cm !important;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
     .print {
       display: block !important;
     }
