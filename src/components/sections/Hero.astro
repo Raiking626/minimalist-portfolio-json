@@ -7,9 +7,22 @@ import LinkedIn from "../../icons/LinkedIn.astro";
 import GitHub from "../../icons/GitHub.astro";
 import Section from "../Section.astro";
 import WorldMap from "../../icons/WorldMap.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
+
+// Las imágenes viven en src/assets para que Astro las optimice.
+// En cv.json basta con indicar el nombre del archivo (p. ej. "/img/profile_photo.webp").
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/*.{jpeg,jpg,png,webp,avif}",
+    { eager: true },
+);
+const imageName = image.split("/").pop();
+const profileImage = Object.entries(images).find(([path]) =>
+    path.endsWith(`/${imageName}`),
+)?.[1].default;
 
 const SOCIAL_ICONS: Record<string, any> = {
     GitHub,
@@ -81,7 +94,19 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
             </footer>
         </div>
         <figure>
-            <img src={image} alt={name} />
+            {
+                profileImage && (
+                    <Image
+                        src={profileImage}
+                        alt={name}
+                        width={115}
+                        height={115}
+                        fit="cover"
+                        densities={[1, 2]}
+                        loading="eager"
+                    />
+                )
+            }
         </figure>
     </div>
 </Section>
