@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 import { basics } from "../../../cv.json";
 import Mail from "../../icons/Mail.astro";
 import Phone from "../../icons/Phone.astro";
@@ -8,8 +10,6 @@ import LinkedIn from "../../icons/LinkedIn.astro";
 import GitHub from "../../icons/GitHub.astro";
 import Section from "../Section.astro";
 import WorldMap from "../../icons/WorldMap.astro";
-import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
@@ -102,7 +102,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
                         alt={name}
                         width={115}
                         height={115}
-                        fit="cover"
                         format="jpg"
                         quality={70}
                         densities={[1, 2]}
