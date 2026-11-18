@@ -8,9 +8,14 @@ import { work } from "../../../cv.json";
     <ul>
         {work.map(({ name, startDate, endDate, position, summary, 
             highlights }) => {
-                const startYear = new Date(startDate).getFullYear();
-                const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actualidad";
-                const years = `${startYear} - ${endYear}`;
+                const formatMonthYear = (dateStr: string): string => {
+                    const [year, month] = dateStr.split("-");
+                    return `${month}/${year}`; // Ej: "10/2026"
+                    // Si no quieres el cero a la izquierda (ej. "3/2021"): `${Number(month)}/${year}`
+                };
+                const DateIn = formatMonthYear(startDate);
+                const DateOut = endDate != null ? formatMonthYear(endDate) : "Actualidad";
+                const timeLine = `${DateIn} - ${DateOut}`;
                 return(
                     <li>
                         <article>
@@ -19,7 +24,7 @@ import { work } from "../../../cv.json";
                                     <h3>{name}</h3>
                                     <h4>{position}</h4>
                                 </div>
-                                <time>{years}</time>
+                                <time>{timeLine}</time>
                             </header>
                             
                             <footer>
