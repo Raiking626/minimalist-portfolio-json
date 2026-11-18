@@ -13,11 +13,16 @@ import { projects } from "../../../cv.json";
                         <article>
                             <header>
                                 <h3>
-                                    <a href={url} title={`Ver el proyecto ${name}`}>
-                                        {name}
-                                    </a>
                                     {
-                                        isActive && <span>&bull;</span>
+                                        url && <a href={url} title={`Ver el proyecto ${name}`}>
+                                            {name}
+                                        </a>
+                                    }
+                                    {
+                                        !url && <span>{name}</span>
+                                    }
+                                    {
+                                        isActive && <span class="icon">&bull;</span>
                                     }
                                 </h3>
                                 <p>{description}</p>
@@ -67,7 +72,7 @@ import { projects } from "../../../cv.json";
         margin-bottom: 4px;
     }
 
-    article h3 span {
+    article h3 .icon {
         color: rgb(42, 221, 2);
     }
 
